@@ -1,0 +1,36 @@
+What is Scala?	Scala is a statically typed, object-oriented programming language that blends imperative and functional programming styles.
+What is an Imperative programming style?	Imperative programs focus on how a program operates. It describes computation in terms of statements that change a programs state.
+What is a Functional programming style?	A Functional programming style treats computations as the evaluations of mathematical functions and avoids state and mutable data.
+How do you invoke the scala interpreter from the command line?	scala
+What is the Scala interpreter?	An interactive “shell” for writing Scala expressions and programs.
+How do you access Java primitives in Scala?	All of Java's primitive types are defined as aliases for classes in the scala package. e.g. boolean == scala.Boolean, float == scala.Float, etc.
+What is the closest thing to Java's void that Scala has?	scala.Unit
+What is the other way of writing scala.Unit?	()
+What is the main difference between Java's void and Scala's Unit?	Scala lets you write down a value of type Unit, namely (), whereas in Java there is no value of type void.
+What is every void returning Java method mapped to in Scala?	A Unit-returning method in Scala.
+What does defining a variable as a val mean?	"That the variable will be assigned once and never change<div><br /></div><div>val forEver = ""Can never change""</div>"
+What does defining a variable as var mean?	"That the variables value may be reassigned<div><br /></div><div>var changeable = ""First this""</div><div>changeable = ""Now this""</div>"
+What is type inference?	Where the Scala interpreter infers the variables type to be the type of its initialization assignment.
+How would you explicitly specify the type of a variable as a String?	"val msg: java.lang.String = ""A String""<div><br /></div><div>or&nbsp;</div><div><br /></div><div>val msg: String = ""A String""</div>"
+How do Scala method begin?	def
+What does a typical Scala method look like?	def max(x: Int, y: Int): Int = if (x &lt; y) y else x
+If a method is recursive what must you always specify?	The result type
+Can the Scala interpeter infer method parameter types?	No
+What must you do if you want to use more than one statement in the body of a method?	Enclose them inside curly braces
+What can you do for methods that do not take parameters?	You can call it without parantheses<div><br /></div><div>i.e. instead of&nbsp;</div><div><br /></div><div>greet()</div><div><br /></div><div>you can do&nbsp;</div><div><br /></div><div>greet</div>
+When a method has side effects what should you do?	Provide parentheses on the method call even if it does not need them
+How would you run a Scala script called hello.scala?	scala hello.scala
+How are command line arguments accessed in Scala scripts?	"Via a Scala array named args<div><br /></div><div>i.e. println(""Hello, "" + args(0) + ""!"")</div>"
+How are Scala array elements accessed?	By specifying the array elements index in parentheses<div><br /></div><div>i.e. names(5)</div>
+Whats does a while loop look like?	var i = 0<div>while (i &lt; args.length) {</div><div>&nbsp; println(args(i))</div><div>&nbsp; i += 1</div><div>}</div>
+How many spaces are recommended for indentation style?	2
+What does a class definition look like?	"class simpleClass {<div>&nbsp; val fieldDef = ""A Field""</div><div>&nbsp; def methodDef() = println(fieldDef)</div><div>}</div>"
+What are class parameters?	"Class parameters can be used directly in the body of the class.<div><br /></div><div>class Example(input: String) {</div><div>&nbsp; def out() = println(input)</div><div>}</div><div><br /></div><div>val ex1 = new Example(""First example"")</div><div>ex1.out()</div>"
+How do you check values of class parameters?	Any code in the class definition which isn't part of a method definition is compiled into the body of the primary constructor.
+What are auxiliary constructors?	Methods named 'this' that allow construction of a class with overloaded parameter lists
+What is a singleton object?	An object that can't be instantiated and which there is ever only one instance.
+What is a companion object?	An object that shares the same name with a class.
+What is a stand-alone object?	An object for which there is no class with the same name.
+How do you comple scala files?	scalac App.scala
+How do you invoke the Scala compiler daemon?	fsc App.scala
+How do you shutdown the fsc (compiler) daemon?	fsc -shutdown
